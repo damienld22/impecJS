@@ -1,0 +1,13 @@
+{
+  "name": "ts-render",
+  "version": "0.0.1",
+  "scripts": {
+    "lib": "pnpm --filter ts-render-lib",
+    "basic-html": "pnpm --filter example-basic-html"
+  },
+  "author": "Damien Le Dantec",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-render-lib": "workspace:*"
+  }
+}

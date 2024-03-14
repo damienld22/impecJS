@@ -1,0 +1,24 @@
+{
+  "name": "ts-render-lib",
+  "type": "module",
+  "main": "dist/ts-render-lib.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/ts-render-lib.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "watch": "vite build --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.27",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.3"
+  }
+}
