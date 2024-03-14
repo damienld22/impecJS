@@ -12,6 +12,16 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 
 ## Progress
 
-- [ ] Render basic HTML
+### Runtime
+
+- [x] Render basic HTML
+- [x] Add children
+- [x] style / classes
+- [ ] Generic attributes
 - [ ] Local state
 - [ ] See later ...
+
+### Tooling
+
+- [ ] Documentation
+- [ ] Dependencies tree of Renderer

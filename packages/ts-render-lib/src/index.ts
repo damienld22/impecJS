@@ -1,4 +1,5 @@
-export function render() {
-  const root = document.querySelector("#app");
-  root?.appendChild(document.createTextNode("Hello, World from lib"));
-}
+import { Renderer } from "@/Elements/Renderer";
+
+export const app = new Renderer();
+export { text } from "@/Elements/Text";
+export { div } from "@/Elements/Div";
