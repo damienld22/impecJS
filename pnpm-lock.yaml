@@ -18,8 +18,17 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(@types/node@20.11.27)
 
+  examples/counter:
+    devDependencies:
+      vite:
+        specifier: ^5.0.0
+        version: 5.0.0(@types/node@20.11.27)
+
   packages/ts-render-lib:
     devDependencies:
+      '@maverick-js/signals':
+        specifier: ^5.11.4
+        version: 5.11.4
       '@types/node':
         specifier: ^20.11.27
         version: 20.11.27
@@ -268,6 +277,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@maverick-js/signals@5.11.4:
+    resolution: {integrity: sha512-fkUqNfnJK1kgfsKimaLp2jcfQr7NXwHZWBhqhQ3pifnYSZrBJv+4tU/klKyGf1mA33mVBYustCAgilJppzGjig==}
+    dev: true
 
   /@microsoft/api-extractor-model@7.28.3(@types/node@20.11.27):
     resolution: {integrity: sha512-wT/kB2oDbdZXITyDh2SQLzaWwTOFbV326fP0pUwNW00WeliARs0qjmXBWmGWardEzp2U3/axkO3Lboqun6vrig==}

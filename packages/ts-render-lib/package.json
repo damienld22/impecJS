@@ -16,6 +16,7 @@
     "watch": "vite build --watch"
   },
   "devDependencies": {
+    "@maverick-js/signals": "^5.11.4",
     "@types/node": "^20.11.27",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "lib": "pnpm --filter ts-render-lib",
-    "basic-html": "pnpm --filter example-basic-html"
+    "basic-html": "pnpm --filter example-basic-html",
+    "counter": "pnpm --filter example-counter"
   },
   "author": "Damien Le Dantec",
   "license": "MIT",

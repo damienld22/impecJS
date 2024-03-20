@@ -7,6 +7,8 @@ export abstract class BaseElementRenderer implements ElementRenderer {
     document.querySelector("#app")!;
   protected eltStyle: string = "";
   protected eltClass: string = "";
+  protected textContent?: string;
+  protected listeners: Record<string, EventListener> = {};
 
   setParent(parent: HTMLElement) {
     this.parent = parent;
@@ -30,6 +32,16 @@ export abstract class BaseElementRenderer implements ElementRenderer {
     this.current = htmlElement;
   }
 
+  setTextContent(text: string): ElementRenderer {
+    this.textContent = text;
+    return this;
+  }
+
+  addElementListener(name: string, listener: EventListener): ElementRenderer {
+    this.listeners[name] = listener;
+    return this;
+  }
+
   render() {
     // Apply style
     if (isHTMLElement(this.current)) {
@@ -41,6 +53,15 @@ export abstract class BaseElementRenderer implements ElementRenderer {
       if (this.eltClass) {
         this.current.setAttribute("class", this.eltClass);
       }
+
+      if (this.textContent) {
+        this.current.textContent = this.textContent;
+      }
+    }
+
+    // Apply listeners
+    for (const [name, listener] of Object.entries(this.listeners)) {
+      this.current.addEventListener(name, listener);
     }
   }
 }

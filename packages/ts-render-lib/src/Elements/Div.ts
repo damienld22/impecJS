@@ -2,9 +2,6 @@ import { BaseContainerElementRenderer } from "@/AbstractsElements/BaseContainerE
 
 export class Div extends BaseContainerElementRenderer {}
 
-const divElement = new Div();
-divElement.setCurrent(document.createElement("div"));
-
 export const div = () => {
   const divElement = new Div();
   divElement.setCurrent(document.createElement("div"));
