@@ -17,6 +17,8 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Render basic HTML
 - [x] Add children
 - [x] style / classes
+- [x] Include components
+- [ ] Fix div encapsulation
 - [ ] Generic attributes
 - [ ] Local state
 - [ ] See later ...
@@ -24,4 +26,5 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 ### Tooling
 
 - [ ] Documentation
+- [ ] Documentation for contributing
 - [ ] Dependencies tree of Renderer

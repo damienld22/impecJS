@@ -3,6 +3,5 @@ import { BaseContainerElementRenderer } from "@/AbstractsElements/BaseContainerE
 export class Renderer extends BaseContainerElementRenderer {
   constructor() {
     super();
-    this.current = document.querySelector("#app")!;
   }
 }

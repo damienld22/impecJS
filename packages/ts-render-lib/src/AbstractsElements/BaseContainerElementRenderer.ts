@@ -10,7 +10,12 @@ export class BaseContainerElementRenderer extends BaseElementRenderer {
     this.current = document.createElement("div");
   }
 
-  addChild(child: ElementRenderer): ElementRenderer {
+  addChild(
+    child: ElementRenderer | (() => ElementRenderer)
+  ): BaseElementRenderer {
+    if (typeof child === "function") {
+      child = child();
+    }
     child.setParent(this.current);
     this.children.push(child);
     return this;

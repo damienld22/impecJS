@@ -20,6 +20,10 @@ export abstract class BaseElementRenderer implements ElementRenderer {
     return this;
   }
 
+  addChild(_child: ElementRenderer): ElementRenderer {
+    throw new Error("addChild is only available for container elements");
+  }
+
   render() {
     // Apply style
     if (this.eltStyle) {
