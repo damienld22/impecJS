@@ -3,11 +3,10 @@ import { BaseElementRenderer } from "@/AbstractsElements/BaseElementRenderer";
 
 export class BaseContainerElementRenderer extends BaseElementRenderer {
   protected children: ElementRenderer[] = [];
-  protected current: HTMLElement;
+  protected current: HTMLElement = document.querySelector("#app")!;
 
   constructor() {
     super();
-    this.current = document.createElement("div");
   }
 
   addChild(
@@ -28,6 +27,8 @@ export class BaseContainerElementRenderer extends BaseElementRenderer {
       child.render();
     });
 
-    this.parent.appendChild(this.current);
+    if (this.parent !== this.current) {
+      this.parent.appendChild(this.current);
+    }
   }
 }

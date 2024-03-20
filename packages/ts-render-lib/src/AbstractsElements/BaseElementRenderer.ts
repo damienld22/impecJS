@@ -1,8 +1,10 @@
 import { ElementRenderer } from "@/types/ElementRenderer";
+import { isHTMLElement } from "@/utils";
 
 export abstract class BaseElementRenderer implements ElementRenderer {
   protected parent: HTMLElement = document.querySelector("#app")!;
-  protected current: HTMLElement = document.querySelector("#app")!;
+  protected current: Element | DocumentFragment =
+    document.querySelector("#app")!;
   protected eltStyle: string = "";
   protected eltClass: string = "";
 
@@ -24,15 +26,21 @@ export abstract class BaseElementRenderer implements ElementRenderer {
     throw new Error("addChild is only available for container elements");
   }
 
+  setCurrent(htmlElement: HTMLElement | DocumentFragment): void {
+    this.current = htmlElement;
+  }
+
   render() {
     // Apply style
-    if (this.eltStyle) {
-      this.current.setAttribute("style", this.eltStyle);
-    }
+    if (isHTMLElement(this.current)) {
+      if (this.eltStyle) {
+        this.current.setAttribute("style", this.eltStyle);
+      }
 
-    // Apply classes
-    if (this.eltClass) {
-      this.current.setAttribute("class", this.eltClass);
+      // Apply classes
+      if (this.eltClass) {
+        this.current.setAttribute("class", this.eltClass);
+      }
     }
   }
 }

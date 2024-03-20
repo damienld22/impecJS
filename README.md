@@ -18,7 +18,8 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Add children
 - [x] style / classes
 - [x] Include components
-- [ ] Fix div encapsulation
+- [ ] Lifecycle
+- [ ] effects
 - [ ] Generic attributes
 - [ ] Local state
 - [ ] See later ...
