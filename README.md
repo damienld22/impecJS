@@ -19,10 +19,11 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] style / classes
 - [x] Include components
 - [x] Local state
-- [ ] Generic signal effects in components
+- [x] Generic signal effects in components
+- [x] Generic attributes
+- [ ] TU
+- [ ] Implement effect (Lifecycle ?)
 - [ ] Lifecycle
-- [ ] effects
-- [ ] Generic attributes
 - [ ] See later ...
 
 ### Tooling
