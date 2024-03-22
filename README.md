@@ -22,6 +22,11 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Generic signal effects in components
 - [x] Generic attributes
 - [x] TU
+- [ ] State object (and array)
+- [ ] Conditional rendering
+- [ ] List rendering
+- [ ] Props / emits on components
+- [ ] Slot component
 - [ ] Implement effect (Lifecycle ?)
 - [ ] Lifecycle
 - [ ] See later ...
