@@ -3,10 +3,15 @@ import { BaseElementRenderer } from "@/AbstractsElements/BaseElementRenderer";
 
 export class BaseContainerElementRenderer extends BaseElementRenderer {
   protected children: ElementRenderer[] = [];
-  protected current: HTMLElement = document.querySelector("#app")!;
+  protected current: HTMLElement;
 
   constructor() {
     super();
+    const root = document.querySelector("#app");
+    if (!root) {
+      throw new Error("Root element not found");
+    }
+    this.current = root as HTMLElement;
   }
 
   addChild(

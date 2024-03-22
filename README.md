@@ -21,7 +21,7 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Local state
 - [x] Generic signal effects in components
 - [x] Generic attributes
-- [ ] TU
+- [x] TU
 - [ ] Implement effect (Lifecycle ?)
 - [ ] Lifecycle
 - [ ] See later ...
@@ -31,3 +31,4 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [ ] Documentation
 - [ ] Documentation for contributing
 - [ ] Dependencies tree of Renderer
+- [ ] CI to deploy lib

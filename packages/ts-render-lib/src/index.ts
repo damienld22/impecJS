@@ -2,7 +2,7 @@ import { Renderer } from "@/Elements/Renderer";
 import { Component } from "./Elements/Component";
 import { BaseContainerElementRenderer } from "./AbstractsElements/BaseContainerElementRenderer";
 
-export const app = new Renderer();
+export const app = () => new Renderer();
 export const component = () => {
   const component = new Component();
   component.setCurrent(document.createDocumentFragment());

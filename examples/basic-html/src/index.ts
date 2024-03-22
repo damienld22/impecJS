@@ -1,7 +1,7 @@
 import { app, div, text } from "ts-render-lib";
 import { HelloWorld } from "./components/HelloWorld";
 
-app
+app()
   .addChild(div().style("border: 1px dashed").addChild(text("Hello, world")))
   .addChild(text("Hello world 2").style("color: red"))
   .addChild(
