@@ -5,6 +5,10 @@ const cpt = component();
 
 const [counter, setCounter] = cpt.addState<number>(0);
 
+cpt.addEffect(() => {
+  console.log("Counter has changed to", counter());
+});
+
 export const Counter = () => {
   cpt.addChild(
     div()

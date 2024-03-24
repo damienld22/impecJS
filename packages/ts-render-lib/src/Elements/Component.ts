@@ -1,5 +1,6 @@
 import {
   computed,
+  effect,
   ReadSignal,
   root,
   signal,
@@ -37,6 +38,16 @@ export class Component<T> extends BaseContainerElementRenderer {
       });
 
       return computed(callback);
+    });
+  }
+
+  addEffect(callback: () => void): void {
+    root((dispose) => {
+      this.current.addEventListener("destroy", () => {
+        dispose();
+      });
+
+      return effect(callback);
     });
   }
 

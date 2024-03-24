@@ -25,10 +25,10 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Lifecycle
 - [x] Conditional rendering
 - [x] Props / emits on components
+- [x] Implement effect
 - [ ] State object (and array)
 - [ ] List rendering
 - [ ] Slot component
-- [ ] Implement effect (Lifecycle ?)
 - [ ] Better usage of Signal (no always use computed, signal outside component, etc...)
 - [ ] See later ...
 
