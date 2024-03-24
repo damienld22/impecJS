@@ -7,9 +7,12 @@ import {
 } from "@maverick-js/signals";
 import { BaseContainerElementRenderer } from "@/GenericElements/BaseContainerElementRenderer";
 
-export class Component extends BaseContainerElementRenderer {
-  constructor() {
+export class Component<T> extends BaseContainerElementRenderer {
+  props?: T;
+
+  constructor(props?: T) {
     super();
+    this.props = props;
   }
 
   addState<T>(value: T): [WriteSignal<T>, (v: T) => void] {

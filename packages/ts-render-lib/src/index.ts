@@ -3,8 +3,8 @@ import { Component } from "./Elements/Component";
 import { BaseContainerElementRenderer } from "./GenericElements/BaseContainerElementRenderer";
 
 export const app = () => new Renderer();
-export const component = () => {
-  const component = new Component();
+export const component = (props?: unknown) => {
+  const component = new Component<typeof props>(props);
   component.setCurrent(document.createDocumentFragment());
 
   return component;
@@ -19,3 +19,6 @@ export const element = (tagName: keyof HTMLElementTagNameMap) => {
   element.setCurrent(document.createElement(tagName));
   return element;
 };
+
+// Export signal types
+export * from "@/types/Signal";

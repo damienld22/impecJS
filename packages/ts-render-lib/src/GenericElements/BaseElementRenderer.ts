@@ -37,7 +37,7 @@ export abstract class BaseElementRenderer {
     this.current = htmlElement;
   }
 
-  setTextContent(text: string): BaseElementRenderer {
+  setTextContent(text: SignalOrValue<string>): BaseElementRenderer {
     this.textContent = text;
     return this;
   }

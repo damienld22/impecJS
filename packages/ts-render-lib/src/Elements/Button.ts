@@ -1,4 +1,5 @@
 import { BaseContainerElementRenderer } from "@/GenericElements/BaseContainerElementRenderer";
+import { SignalOrValue } from "..";
 
 export class Button extends BaseContainerElementRenderer {
   constructor() {
@@ -12,7 +13,7 @@ export class Button extends BaseContainerElementRenderer {
   }
 }
 
-export const button = (text: string): Button => {
+export const button = (text: SignalOrValue<string>): Button => {
   const button = new Button();
   button.setTextContent(text);
   return button;
