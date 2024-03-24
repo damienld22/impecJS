@@ -1,12 +1,10 @@
-import { ElementRenderer } from "@/types/ElementRenderer";
 import { SignalOrValue } from "@/types/Signal";
 import { isHTMLElement } from "@/utils";
 import { effect } from "@maverick-js/signals";
 
-export abstract class BaseElementRenderer implements ElementRenderer {
+export abstract class BaseElementRenderer {
+  current: Element | DocumentFragment = document.querySelector("#app")!;
   protected parent: HTMLElement = document.querySelector("#app")!;
-  protected current: Element | DocumentFragment =
-    document.querySelector("#app")!;
   protected textContent?: SignalOrValue<string>;
   protected listeners: Record<string, EventListener> = {};
   protected attributes: Record<string, any> = {};
@@ -30,7 +28,7 @@ export abstract class BaseElementRenderer implements ElementRenderer {
     return this;
   }
 
-  addChild(_child: ElementRenderer): BaseElementRenderer {
+  addChild(_child: BaseElementRenderer): BaseElementRenderer {
     throw new Error("addChild is only available for container elements");
   }
 

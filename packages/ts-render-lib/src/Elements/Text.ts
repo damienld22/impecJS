@@ -1,4 +1,4 @@
-import { BaseElementRenderer } from "@/AbstractsElements/BaseElementRenderer";
+import { BaseElementRenderer } from "@/GenericElements/BaseElementRenderer";
 import { WriteSignal } from "@maverick-js/signals";
 
 export class Text extends BaseElementRenderer {

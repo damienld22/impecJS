@@ -1,4 +1,4 @@
-import { BaseContainerElementRenderer } from "@/AbstractsElements/BaseContainerElementRenderer";
+import { BaseContainerElementRenderer } from "@/GenericElements/BaseContainerElementRenderer";
 
 export class Renderer extends BaseContainerElementRenderer {
   constructor() {

@@ -5,7 +5,7 @@ import {
   signal,
   WriteSignal,
 } from "@maverick-js/signals";
-import { BaseContainerElementRenderer } from "@/AbstractsElements/BaseContainerElementRenderer";
+import { BaseContainerElementRenderer } from "@/GenericElements/BaseContainerElementRenderer";
 
 export class Component extends BaseContainerElementRenderer {
   constructor() {
@@ -35,5 +35,13 @@ export class Component extends BaseContainerElementRenderer {
 
       return computed(callback);
     });
+  }
+
+  onMounted(callback: () => void) {
+    this.onMountedCallback = callback;
+  }
+
+  onDestroyed(callback: () => void) {
+    this.onDestroyedCallback = callback;
   }
 }

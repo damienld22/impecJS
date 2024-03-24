@@ -140,4 +140,35 @@ describe("Test render of component", () => {
       );
     });
   });
+
+  describe("Lifecycle", () => {
+    it("onMounted", () => {
+      let count = 0;
+      const cpt = component();
+
+      cpt.onMounted(() => {
+        count++;
+      });
+
+      app().addChild(cpt).render();
+
+      expect(count).toEqual(1);
+    });
+
+    it("onDestroyed", () => {
+      let count = 0;
+
+      const cpt = component();
+      cpt.addChild(text("Hello World"));
+
+      cpt.onDestroyed(() => {
+        count++;
+      });
+
+      app().addChild(cpt).render();
+
+      cpt.destroy();
+      expect(count).toEqual(1);
+    });
+  });
 });

@@ -4,7 +4,8 @@
   "scripts": {
     "lib": "pnpm --filter ts-render-lib",
     "basic-html": "pnpm --filter example-basic-html",
-    "counter": "pnpm --filter example-counter"
+    "counter": "pnpm --filter example-counter",
+    "lifecycle": "pnpm --filter example-lifecycle"
   },
   "author": "Damien Le Dantec",
   "license": "MIT",

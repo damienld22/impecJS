@@ -1,6 +1,6 @@
 import { Renderer } from "@/Elements/Renderer";
 import { Component } from "./Elements/Component";
-import { BaseContainerElementRenderer } from "./AbstractsElements/BaseContainerElementRenderer";
+import { BaseContainerElementRenderer } from "./GenericElements/BaseContainerElementRenderer";
 
 export const app = () => new Renderer();
 export const component = () => {
