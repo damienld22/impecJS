@@ -23,8 +23,8 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Generic attributes
 - [x] TU
 - [x] Lifecycle
+- [x] Conditional rendering
 - [ ] State object (and array)
-- [ ] Conditional rendering
 - [ ] List rendering
 - [ ] Props / emits on components
 - [ ] Slot component

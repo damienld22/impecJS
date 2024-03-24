@@ -3,7 +3,7 @@ import { component, text } from "ts-render-lib";
 const cpt = component();
 
 export const HelloWorld = () => {
-  cpt.addChild(text("Hello World"));
+  cpt.addChild(text("Hello World (will be destroyed after 1s)"));
 
   cpt.onMounted(() => {
     console.log("Component is mounted");

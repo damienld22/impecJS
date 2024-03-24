@@ -8,6 +8,7 @@ export abstract class BaseElementRenderer {
   protected textContent?: SignalOrValue<string>;
   protected listeners: Record<string, EventListener> = {};
   protected attributes: Record<string, any> = {};
+  protected conditionalRender: SignalOrValue<boolean> = true;
 
   setParent(parent: HTMLElement) {
     this.parent = parent;
@@ -49,7 +50,36 @@ export abstract class BaseElementRenderer {
     return this;
   }
 
+  if(signal: SignalOrValue<boolean>): BaseElementRenderer {
+    this.conditionalRender = signal;
+    return this;
+  }
+
   render() {
+    if (typeof this.conditionalRender === "function") {
+      effect(() => {
+        if (typeof this.conditionalRender === "function") {
+          if (this.conditionalRender()) {
+            this.createCurrentElement();
+
+            // If the current element has been removed, we should re-append it
+            if (!this.current.parentNode) {
+              this.parent.appendChild(this.current);
+            }
+          } else {
+            const parentNode = this.current.parentNode;
+            parentNode?.removeChild(this.current);
+          }
+        }
+      });
+    } else {
+      if (this.conditionalRender) {
+        this.createCurrentElement();
+      }
+    }
+  }
+
+  private createCurrentElement() {
     // Apply text content
     if (this.textContent) {
       if (typeof this.textContent === "function") {
