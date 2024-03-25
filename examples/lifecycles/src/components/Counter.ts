@@ -1,10 +1,10 @@
-import { component, div, text, button } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "ts-render-lib";
 
 const cpt = component();
 
-const [counter, setCounter] = cpt.addState<number>(0);
-const isPositiveOr0 = cpt.addComputed(() => counter() >= 0);
-const isNegative = cpt.addComputed(() => counter() < 0);
+const [counter, setCounter] = state<number>(0);
+const isPositiveOr0 = computed(() => counter() >= 0);
+const isNegative = computed(() => counter() < 0);
 
 export const Counter = () => {
   cpt.addChild(

@@ -21,5 +21,6 @@ export const element = (tagName: keyof HTMLElementTagNameMap) => {
   return element;
 };
 
-// Export signal types
+// Export signal
 export * from "@/types/Signal";
+export * from "@/Business/Signals";

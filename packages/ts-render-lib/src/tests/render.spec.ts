@@ -1,5 +1,14 @@
 import { describe, expect, it, beforeEach, afterEach } from "vitest";
-import { app, button, component, div, element, text } from "@/index";
+import {
+  app,
+  button,
+  component,
+  div,
+  element,
+  text,
+  computed,
+  state,
+} from "@/index";
 
 const getRender = () => document.querySelector("#app")?.innerHTML;
 
@@ -108,11 +117,11 @@ describe("Test render of component", () => {
   describe("Signal / computed values", () => {
     it("Computed attribute and signal value", async () => {
       const cpt = component();
-      const [counter, setCounter] = cpt.addState<number>(0);
-      const computedStyle = cpt.addComputed<string>(
+      const [counter, setCounter] = state<number>(0);
+      const computedStyle = computed<string>(
         () => `padding: 5px; color: ${counter() > 0 ? "green" : "red"};`
       );
-      const computedClass = cpt.addComputed<string>(() =>
+      const computedClass = computed<string>(() =>
         counter() > 0 ? "text-bold" : "text-italic"
       );
 

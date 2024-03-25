@@ -1,14 +1,14 @@
-import { component, div, text, button } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "ts-render-lib";
 import "./Counter.css";
 
 const cpt = component();
 
-const [counter, setCounter] = cpt.addState<number>(0);
-const computedStyle = cpt.addComputed<string>(
+const [counter, setCounter] = state<number>(0);
+const computedStyle = computed<string>(
   () => `padding: 5px; color: ${counter() > 0 ? "green" : "red"};`
 );
 
-const computedClass = cpt.addComputed<string>(() =>
+const computedClass = computed<string>(() =>
   counter() > 0 ? "text-bold" : "text-italic"
 );
 

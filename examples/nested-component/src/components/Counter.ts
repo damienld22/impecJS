@@ -1,11 +1,11 @@
-import { component, div, text, button } from "ts-render-lib";
+import { component, div, text, button, state, effect } from "ts-render-lib";
 import { ResetButton } from "./ResetButton";
 
 const cpt = component();
 
-const [counter, setCounter] = cpt.addState<number>(0);
+const [counter, setCounter] = state<number>(0);
 
-cpt.addEffect(() => {
+effect(() => {
   console.log("Counter has changed to", counter());
 });
 

@@ -1,13 +1,21 @@
-import { component, div, text, button, loop } from "ts-render-lib";
+import {
+  component,
+  div,
+  text,
+  button,
+  loop,
+  state,
+  computed,
+} from "ts-render-lib";
 
 const cpt = component();
 
-const [counter, setCounter] = cpt.addState<number>(0);
+const [counter, setCounter] = state<number>(0);
 
-const isDisabled = cpt.addComputed<boolean>(() => counter() === 0);
+const isDisabled = computed<boolean>(() => counter() === 0);
 
-const lines = cpt.addComputed(() => new Array(counter()).fill("Line"));
-const computedStyle = cpt.addComputed<string>(
+const lines = computed(() => new Array(counter()).fill("Line"));
+const computedStyle = computed<string>(
   () => `padding: 5px; color: ${counter() >= 5 ? "red" : "black"};`
 );
 

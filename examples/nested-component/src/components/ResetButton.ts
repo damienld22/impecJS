@@ -1,4 +1,4 @@
-import { button, component, Signal } from "ts-render-lib";
+import { button, component, Signal, computed } from "ts-render-lib";
 
 interface Props {
   onClick: () => void;
@@ -7,7 +7,7 @@ interface Props {
 
 export const ResetButton = (props: Props) => {
   const cpt = component(props);
-  const textButton = cpt.addComputed(() => `Reset (${props.value()})`);
+  const textButton = computed(() => `Reset (${props.value()})`);
 
   cpt.addChild(button(textButton).onClick(props.onClick));
 
