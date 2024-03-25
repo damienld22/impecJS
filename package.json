@@ -6,7 +6,8 @@
     "basic-html": "pnpm --filter example-basic-html",
     "counter": "pnpm --filter example-counter",
     "lifecycle": "pnpm --filter example-lifecycle",
-    "nested-component": "pnpm --filter example-nested-component"
+    "nested-component": "pnpm --filter example-nested-component",
+    "list-rendering": "pnpm --filter example-list-rendering"
   },
   "author": "Damien Le Dantec",
   "license": "MIT",

@@ -14,7 +14,7 @@ export abstract class BaseElementRenderer {
     this.parent = parent;
   }
 
-  attribute(name: string, value: SignalOrValue<string>): BaseElementRenderer {
+  attribute(name: string, value: SignalOrValue<any>): BaseElementRenderer {
     this.attributes[name] = value;
     return this;
   }
@@ -98,12 +98,32 @@ export abstract class BaseElementRenderer {
       if (typeof value === "function") {
         effect(() => {
           if (typeof value === "function" && isHTMLElement(this.current)) {
-            this.current.setAttribute(name, value() as string);
+            if (typeof value() === "boolean") {
+              if (value()) {
+                this.current.setAttribute(name, "true");
+              } else {
+                if (this.current.hasAttribute(name)) {
+                  this.current.removeAttribute(name);
+                }
+              }
+            } else {
+              this.current.setAttribute(name, value());
+            }
           }
         });
       } else {
         if (isHTMLElement(this.current)) {
-          this.current.setAttribute(name, value);
+          if (typeof value === "boolean") {
+            if (value) {
+              this.current.setAttribute(name, "true");
+            } else {
+              if (this.current.hasAttribute(name)) {
+                this.current.removeAttribute(name);
+              }
+            }
+          } else {
+            this.current.setAttribute(name, value);
+          }
         }
       }
     }

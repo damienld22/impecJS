@@ -13,6 +13,7 @@ export const component = (props?: unknown) => {
 export { text } from "@/Elements/Text";
 export { div } from "@/Elements/Div";
 export { button } from "@/Elements/Button";
+export { loop } from "@/Elements/Loop";
 
 export const element = (tagName: keyof HTMLElementTagNameMap) => {
   const element = new BaseContainerElementRenderer();

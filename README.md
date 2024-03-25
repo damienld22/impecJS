@@ -26,9 +26,9 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Conditional rendering
 - [x] Props / emits on components
 - [x] Implement effect
+- [x] List rendering
+- [ ] Performant list rendering + Fragment
 - [ ] State object (and array)
-- [ ] List rendering
-- [ ] Slot component
 - [ ] Better usage of Signal (no always use computed, signal outside component, etc...)
 - [ ] See later ...
 
