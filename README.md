@@ -27,9 +27,10 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [x] Props / emits on components
 - [x] Implement effect
 - [x] List rendering
-- [ ] Performant list rendering + Fragment
-- [ ] State object (and array)
-- [ ] Better usage of Signal (no always use computed, signal outside component, etc...)
+- [x] State object (and array)
+- [ ] More real examples
+- [ ] Real packaging
+- [ ] Benchmark
 - [ ] See later ...
 
 ### Tooling

@@ -9,6 +9,7 @@ export abstract class BaseElementRenderer {
   protected listeners: Record<string, EventListener> = {};
   protected attributes: Record<string, any> = {};
   protected conditionalRender: SignalOrValue<boolean> = true;
+  protected currentValue: SignalOrValue<any>;
 
   setParent(parent: HTMLElement) {
     this.parent = parent;
@@ -26,6 +27,11 @@ export abstract class BaseElementRenderer {
 
   class(className: SignalOrValue<string>): BaseElementRenderer {
     this.attributes["class"] = className;
+    return this;
+  }
+
+  value(val: SignalOrValue<any>): BaseElementRenderer {
+    this.currentValue = val;
     return this;
   }
 
@@ -80,6 +86,19 @@ export abstract class BaseElementRenderer {
   }
 
   private createCurrentElement() {
+    // Apply value
+    if (this.currentValue) {
+      if (typeof this.currentValue === "function") {
+        effect(() => {
+          if (this.currentValue && typeof this.currentValue === "function") {
+            (this.current as HTMLInputElement).value = this.currentValue();
+          }
+        });
+      } else {
+        this.current.nodeValue = this.textContent as any;
+      }
+    }
+
     // Apply text content
     if (this.textContent) {
       if (typeof this.textContent === "function") {

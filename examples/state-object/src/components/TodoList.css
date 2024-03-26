@@ -1,0 +1,11 @@
+.completed {
+  text-decoration: line-through;
+}
+
+.title {
+  font-size: 150%;
+}
+
+.list {
+  margin: 20px;
+}
