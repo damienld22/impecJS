@@ -1,12 +1,12 @@
 {
-  "name": "example-basic-html",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
-  "author": "Damien Le Dantec",
-  "license": "MIT",
-  "devDependencies": {
-    "vite": "^5.0.0"
-  }
+	"name": "example-basic-html",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build"
+	},
+	"author": "Damien Le Dantec",
+	"license": "MIT",
+	"devDependencies": {
+		"vite": "^5.0.0"
+	}
 }

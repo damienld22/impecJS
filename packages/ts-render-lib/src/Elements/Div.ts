@@ -3,7 +3,7 @@ import { BaseContainerElementRenderer } from "@/GenericElements/BaseContainerEle
 export class Div extends BaseContainerElementRenderer {}
 
 export const div = () => {
-  const divElement = new Div();
-  divElement.setCurrent(document.createElement("div"));
-  return divElement;
+	const divElement = new Div();
+	divElement.setCurrent(document.createElement("div"));
+	return divElement;
 };

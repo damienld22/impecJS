@@ -4,10 +4,10 @@ import { BaseContainerElementRenderer } from "./GenericElements/BaseContainerEle
 
 export const app = () => new Renderer();
 export const component = (props?: unknown) => {
-  const component = new Component<typeof props>(props);
-  component.setCurrent(document.createDocumentFragment());
+	const component = new Component<typeof props>(props);
+	component.setCurrent(document.createDocumentFragment());
 
-  return component;
+	return component;
 };
 
 export { text } from "@/Elements/Text";
@@ -16,9 +16,9 @@ export { button } from "@/Elements/Button";
 export { loop } from "@/Elements/Loop";
 
 export const element = (tagName: keyof HTMLElementTagNameMap) => {
-  const element = new BaseContainerElementRenderer();
-  element.setCurrent(document.createElement(tagName));
-  return element;
+	const element = new BaseContainerElementRenderer();
+	element.setCurrent(document.createElement(tagName));
+	return element;
 };
 
 // Export signal

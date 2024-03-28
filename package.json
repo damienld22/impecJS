@@ -1,19 +1,26 @@
 {
-  "name": "ts-render",
-  "version": "0.0.1",
-  "scripts": {
-    "lib": "pnpm --filter ts-render-lib",
-    "basic-html": "pnpm --filter example-basic-html",
-    "counter": "pnpm --filter example-counter",
-    "lifecycle": "pnpm --filter example-lifecycle",
-    "nested-component": "pnpm --filter example-nested-component",
-    "list-rendering": "pnpm --filter example-list-rendering",
-    "state-object": "pnpm --filter example-state-object",
-    "test": "CI=true pnpm lib test"
-  },
-  "author": "Damien Le Dantec",
-  "license": "MIT",
-  "devDependencies": {
-    "ts-render-lib": "workspace:*"
-  }
+	"name": "ts-render",
+	"version": "0.0.1",
+	"scripts": {
+		"lib": "pnpm --filter ts-render-lib",
+		"basic-html": "pnpm --filter example-basic-html",
+		"counter": "pnpm --filter example-counter",
+		"lifecycle": "pnpm --filter example-lifecycle",
+		"nested-component": "pnpm --filter example-nested-component",
+		"list-rendering": "pnpm --filter example-list-rendering",
+		"state-object": "pnpm --filter example-state-object",
+		"test": "CI=true pnpm lib test",
+		"format": "pnpm biome format .",
+		"format:fix": "pnpm biome format . --write",
+		"lint": "pnpm biome lint .",
+		"lint:fix": "pnpm biome lint . --apply",
+		"prepare": "husky"
+	},
+	"author": "Damien Le Dantec",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "1.6.3",
+		"husky": "^9.0.11",
+		"ts-render-lib": "workspace:*"
+	}
 }
