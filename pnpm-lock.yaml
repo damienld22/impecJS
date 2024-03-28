@@ -30,7 +30,19 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(@types/node@20.11.27)
 
+  examples/list-rendering:
+    devDependencies:
+      vite:
+        specifier: ^5.0.0
+        version: 5.0.0(@types/node@20.11.27)
+
   examples/nested-component:
+    devDependencies:
+      vite:
+        specifier: ^5.0.0
+        version: 5.0.0(@types/node@20.11.27)
+
+  examples/state-object:
     devDependencies:
       vite:
         specifier: ^5.0.0
