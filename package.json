@@ -8,7 +8,8 @@
     "lifecycle": "pnpm --filter example-lifecycle",
     "nested-component": "pnpm --filter example-nested-component",
     "list-rendering": "pnpm --filter example-list-rendering",
-    "state-object": "pnpm --filter example-state-object"
+    "state-object": "pnpm --filter example-state-object",
+    "test": "CI=true pnpm lib test"
   },
   "author": "Damien Le Dantec",
   "license": "MIT",
