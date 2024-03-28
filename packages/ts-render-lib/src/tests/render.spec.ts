@@ -41,13 +41,13 @@ describe("Test render of component", () => {
     });
 
     it("Set text content", () => {
-      app().addChild(div().setTextContent("toto")).render();
+      app().addChild(div().textContent("toto")).render();
 
       expect(getRender()).toEqual("<div>toto</div>");
     });
 
     it("Custom element", () => {
-      app().addChild(element("code").setTextContent("toto")).render();
+      app().addChild(element("code").textContent("toto")).render();
 
       expect(getRender()).toEqual("<code>toto</code>");
     });

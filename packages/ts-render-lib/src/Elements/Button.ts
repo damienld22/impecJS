@@ -15,6 +15,6 @@ export class Button extends BaseContainerElementRenderer {
 
 export const button = (text: SignalOrValue<string>): Button => {
   const button = new Button();
-  button.setTextContent(text);
+  button.textContent(text);
   return button;
 };

@@ -8,7 +8,7 @@ export class Text extends BaseElementRenderer {
   }
 
   text(text: string | WriteSignal<any>): Text {
-    this.textContent = text;
+    this.currentTextContent = text;
     return this;
   }
 

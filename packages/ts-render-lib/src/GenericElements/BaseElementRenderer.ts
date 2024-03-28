@@ -5,7 +5,7 @@ import { effect } from "@maverick-js/signals";
 export abstract class BaseElementRenderer {
   current: Element | DocumentFragment = document.querySelector("#app")!;
   protected parent: HTMLElement = document.querySelector("#app")!;
-  protected textContent?: SignalOrValue<string>;
+  protected currentTextContent?: SignalOrValue<string>;
   protected listeners: Record<string, EventListener> = {};
   protected attributes: Record<string, any> = {};
   protected conditionalRender: SignalOrValue<boolean> = true;
@@ -43,8 +43,8 @@ export abstract class BaseElementRenderer {
     this.current = htmlElement;
   }
 
-  setTextContent(text: SignalOrValue<string>): BaseElementRenderer {
-    this.textContent = text;
+  textContent(text: SignalOrValue<string>): BaseElementRenderer {
+    this.currentTextContent = text;
     return this;
   }
 
@@ -95,20 +95,20 @@ export abstract class BaseElementRenderer {
           }
         });
       } else {
-        this.current.nodeValue = this.textContent as any;
+        this.current.nodeValue = this.currentTextContent as any;
       }
     }
 
     // Apply text content
-    if (this.textContent) {
-      if (typeof this.textContent === "function") {
+    if (this.currentTextContent) {
+      if (typeof this.currentTextContent === "function") {
         effect(() => {
-          if (this.textContent && typeof this.textContent === "function") {
-            this.current.textContent = this.textContent();
+          if (this.currentTextContent && typeof this.currentTextContent === "function") {
+            this.current.textContent = this.currentTextContent();
           }
         });
       } else {
-        this.current.textContent = this.textContent;
+        this.current.textContent = this.currentTextContent;
       }
     }
 
