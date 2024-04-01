@@ -13,12 +13,10 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 ## To do
 
 - [ ] More real examples
-- [ ] Real packaging
 - [ ] Benchmark
 - [ ] More TU (on real life cases)
 - [ ] Documentation for contributing
 - [ ] Dependencies tree of Renderer
-- [ ] CI to deploy lib (with linter / TU / etc...)
 - [ ] Init script
 - [ ] See later ...
 
