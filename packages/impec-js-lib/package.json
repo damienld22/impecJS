@@ -4,8 +4,11 @@
 	"main": "dist/impec-js.js",
 	"description": "A small frontend library to render SPA using Builder design pattern with TypeScript",
 	"types": "dist/index.d.ts",
-	"version": "0.0.1",
-	"repository": "https://github.com/damienld22/impecJS.git",
+	"version": "0.0.2",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/damienld22/impecJS.git"
+	},
 	"keywords": ["impec", "impec-js", "frontend library", "typescript"],
 	"author": "Damien Le Dantec <damien-le-dantec@hotmail.fr>",
 	"license": "ISC",
@@ -28,7 +31,7 @@
 		"test:watch": "vitest",
 		"lint": "pnpm biome lint .",
 		"lint:fix": "pnpm biome lint . --apply",
-		"prepublish": "pnpm build && cp ../../README.md README.md",
+		"prepublishOnly": "pnpm build && cp ../../README.md README.md",
 		"prepack": "pnpm build",
 		"pack": "pnpm pack"
 	},
