@@ -18,6 +18,9 @@ jobs:
     - name: Install pnpm
       run: curl -f https://get.pnpm.io/v6.js | node - add --global pnpm
 
+    - name: Install pnpm
+      run: curl -f https://get.pnpm.io/v6.js | node - add --global pnpm
+
     - name: Install dependencies
       run: pnpm install
 

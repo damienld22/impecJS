@@ -28,7 +28,7 @@
 		"test:watch": "vitest",
 		"lint": "pnpm biome lint .",
 		"lint:fix": "pnpm biome lint . --apply",
-		"prepublish": "pnpm build",
+		"prepublish": "pnpm build && cp ../../README.md README.md",
 		"prepack": "pnpm build",
 		"pack": "pnpm pack"
 	},
