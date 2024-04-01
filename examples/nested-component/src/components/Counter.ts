@@ -1,4 +1,4 @@
-import { component, div, text, button, state, effect } from "impec-js-lib";
+import { component, div, text, button, state, effect } from "impec-js";
 import { ResetButton } from "./ResetButton";
 
 const cpt = component();

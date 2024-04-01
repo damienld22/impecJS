@@ -1,12 +1,22 @@
 {
-	"name": "impec-js-lib",
+	"name": "impec-js",
 	"type": "module",
-	"main": "dist/impec-js-lib.js",
+	"main": "dist/impec-js.js",
+	"description": "A small frontend library to render SPA using Builder design pattern with TypeScript",
 	"types": "dist/index.d.ts",
+	"version": "0.0.1",
+	"repository": "https://github.com/damienld22/impecJS.git",
+	"keywords": ["impec", "impec-js", "frontend library", "typescript"],
+	"author": "Damien Le Dantec <damien-le-dantec@hotmail.fr>",
+	"license": "ISC",
 	"exports": {
 		".": {
 			"import": {
-				"default": "./dist/impec-js-lib.js",
+				"default": "./dist/impec-js.js",
+				"types": "./dist/index.d.ts"
+			},
+			"require": {
+				"default": "./dist/impec-js.cjs",
 				"types": "./dist/index.d.ts"
 			}
 		}
@@ -14,7 +24,13 @@
 	"scripts": {
 		"build": "tsc && vite build",
 		"watch": "vite build --watch",
-		"test": "vitest"
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"lint": "pnpm biome lint .",
+		"lint:fix": "pnpm biome lint . --apply",
+		"prepublish": "pnpm build",
+		"prepack": "pnpm build",
+		"pack": "pnpm pack"
 	},
 	"devDependencies": {
 		"@maverick-js/signals": "^5.11.4",

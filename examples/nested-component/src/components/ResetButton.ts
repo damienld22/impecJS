@@ -1,4 +1,4 @@
-import { button, component, type Signal, computed } from "impec-js-lib";
+import { button, component, type Signal, computed } from "impec-js";
 
 interface Props {
 	onClick: () => void;

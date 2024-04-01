@@ -1,12 +1,4 @@
-import {
-	component,
-	div,
-	text,
-	button,
-	loop,
-	state,
-	computed,
-} from "impec-js-lib";
+import { component, div, text, button, loop, state, computed } from "impec-js";
 
 const cpt = component();
 

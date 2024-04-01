@@ -1,19 +1,17 @@
 {
-	"name": "impec-js",
-	"version": "0.0.1",
 	"scripts": {
-		"lib": "pnpm --filter impec-js-lib",
+		"build": "turbo build",
+		"lib": "pnpm --filter impec-js",
 		"basic-html": "pnpm --filter example-basic-html",
 		"counter": "pnpm --filter example-counter",
 		"lifecycle": "pnpm --filter example-lifecycle",
 		"nested-component": "pnpm --filter example-nested-component",
 		"list-rendering": "pnpm --filter example-list-rendering",
 		"state-object": "pnpm --filter example-state-object",
-		"test": "CI=true pnpm lib test",
+		"test": "turbo test",
 		"format": "pnpm biome format .",
 		"format:fix": "pnpm biome format . --write",
-		"lint": "pnpm biome lint .",
-		"lint:fix": "pnpm biome lint . --apply",
+		"lint": "turbo lint",
 		"prepare": "husky"
 	},
 	"author": "Damien Le Dantec",
@@ -21,6 +19,6 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
 		"husky": "^9.0.11",
-		"impec-js-lib": "workspace:*"
+		"impec-js": "workspace:*"
 	}
 }

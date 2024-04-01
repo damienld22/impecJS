@@ -1,12 +1,4 @@
-import {
-	button,
-	component,
-	div,
-	element,
-	loop,
-	state,
-	text,
-} from "impec-js-lib";
+import { button, component, div, element, loop, state, text } from "impec-js";
 import "./TodoList.css";
 
 type Todo = {

@@ -19,6 +19,7 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 - [ ] Documentation for contributing
 - [ ] Dependencies tree of Renderer
 - [ ] CI to deploy lib (with linter / TU / etc...)
+- [ ] Init script
 - [ ] See later ...
 
 ## Documentation
