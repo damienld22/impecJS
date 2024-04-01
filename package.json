@@ -1,8 +1,8 @@
 {
-	"name": "ts-render",
+	"name": "impec-js",
 	"version": "0.0.1",
 	"scripts": {
-		"lib": "pnpm --filter ts-render-lib",
+		"lib": "pnpm --filter impec-js-lib",
 		"basic-html": "pnpm --filter example-basic-html",
 		"counter": "pnpm --filter example-counter",
 		"lifecycle": "pnpm --filter example-lifecycle",
@@ -21,6 +21,6 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
 		"husky": "^9.0.11",
-		"ts-render-lib": "workspace:*"
+		"impec-js-lib": "workspace:*"
 	}
 }

@@ -1,4 +1,4 @@
-import { app, div, text } from "ts-render-lib";
+import { app, div, text } from "impec-js-lib";
 import { HelloWorld } from "./components/HelloWorld";
 
 app()

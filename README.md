@@ -1,4 +1,4 @@
-# ts-render
+# Impec JS
 
 ## Description
 
@@ -25,14 +25,14 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 
 ### Getting started
 
-Using _ts-render_ is pretty simple. It is inspired on [Builder design pattern](https://refactoring.guru/design-patterns/builder) to chain the creation of DOM elements or add attributes an them.
+Using _Impec JS_ is pretty simple. It is inspired on [Builder design pattern](https://refactoring.guru/design-patterns/builder) to chain the creation of DOM elements or add attributes an them.
 
 The library provide some functions to create DOM element and always return the created instance to chain them.
 
 See the _HelloWorld_ code :
 
 ```js
-import { app } from "ts-render-lib";
+import { app } from "impec-js";
 
 app().addChild(text("Hello World")).render();
 ```
@@ -41,7 +41,7 @@ app().addChild(text("Hello World")).render();
 
 Then you use `addChild()` to add element. For example here, we add a text (`span`).
 
-#### State in _ts-render_
+#### State in _Impec JS_
 
 The state management is based on `Signal` (Using the library [maverick-js/signals](https://github.com/maverick-js/signals)).
 
@@ -49,7 +49,7 @@ To create a state, you use `state` function.
 This function return a tuple of [value, setter] like ReactJS.
 
 ```js
-import { state } from "ts-render";
+import { state } from "impec-js";
 
 const [value, setValue] = state<number>(0);
 ```
@@ -57,7 +57,7 @@ const [value, setValue] = state<number>(0);
 To create value automatically updated when its dependencies are updated, you can use `computed` :
 
 ```js
-import { state, computed } from "ts-render";
+import { state, computed } from "impec-js";
 
 const [value, setValue] = state<number>(0);
 const isPositive = computed(() => value() > 0)
@@ -66,7 +66,7 @@ const isPositive = computed(() => value() > 0)
 If you want execute code when a state is updated, you can use `effect` :
 
 ```js
-import { state, effect } from "ts-render";
+import { state, effect } from "impec-js";
 
 const [value, setValue] = state<number>(0);
 effect(() => console.log(`value is updated : ${value()}`))
@@ -74,7 +74,7 @@ effect(() => console.log(`value is updated : ${value()}`))
 
 #### Create DOM element
 
-_ts-render_ provide a function to create DOM element : `element`.
+_Impec JS_ provide a function to create DOM element : `element`.
 You can easily add any attribute of them using `attribute` function or add event listener using `addEventListener`.
 
 The properties `value` and `textContent` are specifics so dedicated functions exists : `value` and `textContent`.
@@ -82,7 +82,7 @@ The properties `value` and `textContent` are specifics so dedicated functions ex
 See this example : 
 
 ```js
-import { app, element } from 'ts-render';
+import { app, element } from 'impec-js';
 
 app()
   // Add a basic button
@@ -104,7 +104,7 @@ app()
 
 As you can see, `addChild` is used to put new element as child node of another.
 
-Fortunately, _ts-render_ provide some function to facilitate the creation of DOM elements or attributes.
+Fortunately, _Impec JS_ provide some function to facilitate the creation of DOM elements or attributes.
 
 For example you have :
 - `style()` to apply style
@@ -126,7 +126,7 @@ To create your application you need to use `render()` function at the end of you
 Each attribute / textContent / value / etc... can use primitive value but also signal to be automatically updated.
 
 ```js
-import { component, div, text, button, state, computed } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "impec-js";
 
 const [counter, setCounter] = state<number>(0);
 const plainValue = 12;
@@ -147,7 +147,7 @@ Then you juste need to call the exported component like a function to use it.
 
 ```js
 // HelloWorld.ts
-import { component, text } from "ts-render-lib";
+import { component, text } from "impec-js";
 
 export const HelloWorld = () => {
   return component().addChild(text("Hello World from component"));
@@ -156,7 +156,7 @@ export const HelloWorld = () => {
 
 ```js
 // index.ts
-import { app } from "ts-render-lib";
+import { app } from "impec-js";
 import { HelloWorld } from "./HelloWorld";
 
 app().addChild(HelloWorld()).render();
@@ -169,7 +169,7 @@ You can put function to emit value to the parent component.
 
 ```js
 // HelloWorld.ts
-import { component, text } from "ts-render-lib";
+import { component, text } from "impec-js";
 
 export const HelloWorld = ({ value: string }) => {
   return component().addChild(text(value));
@@ -178,7 +178,7 @@ export const HelloWorld = ({ value: string }) => {
 
 ```js
 // index.ts
-import { app } from "ts-render-lib";
+import { app } from "impec-js";
 import { HelloWorld } from "./HelloWorld";
 
 app()
@@ -195,7 +195,7 @@ There is only 2 lifecycle hooks at this time :
 
 ```js
 // HelloWorld.ts
-import { component, text } from "ts-render-lib";
+import { component, text } from "impec-js";
 
 const cpt = component();
 
@@ -218,11 +218,11 @@ export const HelloWorld = () => {
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, computed } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "impec-js";
 
 const cpt = component();
 
-const [counter, setCounter] = state < number > 0;
+const [counter, setCounter] = state<number>(0);
 
 export const Counter = () => {
   cpt.addChild(
@@ -239,15 +239,14 @@ export const Counter = () => {
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, computed } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "impec-js";
 
 const cpt = component();
 
-const [counter, setCounter] = state < number > 0;
+const [counter, setCounter] = state<number>(0);
 
 // The class depend on counter value
-const computedClass =
-  computed < string > (() => (counter() > 0 ? "text-bold" : "text-italic"));
+const computedClass = computed<string>(() => counter() > 0 ? "text-bold" : "text-italic");
 
 export const Counter = () => {
   cpt.addChild(
@@ -264,11 +263,11 @@ export const Counter = () => {
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, effect } from "ts-render-lib";
+import { component, div, text, button, state, effect } from "impec-js";
 
 const cpt = component();
 
-const [counter, setCounter] = state < number > 0;
+const [counter, setCounter] = state<number>(0);
 
 effect(() => console.log("Counter value changed", counter()));
 
@@ -289,16 +288,15 @@ On each element, you can use `if()` method to put conditional rendering.
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, computed } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "impec-js";
 
 const cpt = component();
 
-const [counter, setCounter] = state < number > 0;
+const [counter, setCounter] = state<number>(0);
 const isCounterSup0 = computed(() => counter() > 0);
 
 // The class depend on counter value
-const computedClass =
-  computed < string > (() => (counter() > 0 ? "text-bold" : "text-italic"));
+const computedClass = computed<string>(() => counter() > 0 ? "text-bold" : "text-italic");
 
 export const Counter = () => {
   cpt.addChild(
@@ -326,12 +324,12 @@ import {
   loop,
   state,
   computed,
-} from "ts-render-lib";
+} from "impec-js";
 
 const cpt = component();
 
-const [counter, setCounter] = state < number > 0;
-const isDisabled = computed < boolean > (() => counter() === 0);
+const [counter, setCounter] = state<number>(0);
+const isDisabled = computed<boolean>(() => counter() === 0);
 const lines = computed(() => new Array(counter()).fill("Line"));
 
 export const Counter = () => {
@@ -354,4 +352,4 @@ export const Counter = () => {
 
 #### Slot
 
-There is no `Slot`-like feature in "ts-render" because you can easily use `addChild()`.
+There is no `Slot`-like feature in "Impec JS" because you can easily use `addChild()`.

@@ -1,4 +1,4 @@
-import { component, text } from "ts-render-lib";
+import { component, text } from "impec-js-lib";
 
 const cpt = component();
 

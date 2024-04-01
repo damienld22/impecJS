@@ -17,7 +17,7 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: resolve(__dirname, "src/index.ts"),
-			name: "ts-render-lib",
+			name: "impec-js-lib",
 		},
 	},
 });

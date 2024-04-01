@@ -1,4 +1,4 @@
-import { button, component, type Signal, computed } from "ts-render-lib";
+import { button, component, type Signal, computed } from "impec-js-lib";
 
 interface Props {
 	onClick: () => void;

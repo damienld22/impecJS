@@ -1,12 +1,12 @@
 {
-	"name": "ts-render-lib",
+	"name": "impec-js-lib",
 	"type": "module",
-	"main": "dist/ts-render-lib.js",
+	"main": "dist/impec-js-lib.js",
 	"types": "dist/index.d.ts",
 	"exports": {
 		".": {
 			"import": {
-				"default": "./dist/ts-render-lib.js",
+				"default": "./dist/impec-js-lib.js",
 				"types": "./dist/index.d.ts"
 			}
 		}

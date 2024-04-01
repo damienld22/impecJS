@@ -6,7 +6,7 @@ import {
 	loop,
 	state,
 	text,
-} from "ts-render-lib";
+} from "impec-js-lib";
 import "./TodoList.css";
 
 type Todo = {

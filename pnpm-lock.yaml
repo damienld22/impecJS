@@ -14,9 +14,9 @@ importers:
       husky:
         specifier: ^9.0.11
         version: 9.0.11
-      ts-render-lib:
+      impec-js-lib:
         specifier: workspace:*
-        version: link:packages/ts-render-lib
+        version: link:packages/impec-js-lib
 
   examples/basic-html:
     devDependencies:
@@ -54,7 +54,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(@types/node@20.11.27)
 
-  packages/ts-render-lib:
+  packages/impec-js-lib:
     devDependencies:
       '@maverick-js/signals':
         specifier: ^5.11.4

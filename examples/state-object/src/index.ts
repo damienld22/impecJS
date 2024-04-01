@@ -1,4 +1,4 @@
-import { app } from "ts-render-lib";
+import { app } from "impec-js-lib";
 import { TodoList } from "./components/TodoList";
 
 app().addChild(TodoList()).render();

@@ -6,7 +6,7 @@ import {
 	loop,
 	state,
 	computed,
-} from "ts-render-lib";
+} from "impec-js-lib";
 
 const cpt = component();
 

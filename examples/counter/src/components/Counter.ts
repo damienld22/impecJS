@@ -1,4 +1,4 @@
-import { component, div, text, button, state, computed } from "ts-render-lib";
+import { component, div, text, button, state, computed } from "impec-js-lib";
 import "./Counter.css";
 
 const cpt = component();

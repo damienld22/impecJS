@@ -1,4 +1,4 @@
-import { app } from "ts-render-lib";
+import { app } from "impec-js-lib";
 import { HelloWorld } from "./components/HelloWorld";
 import { Counter } from "./components/Counter";
 
