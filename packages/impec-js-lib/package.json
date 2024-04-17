@@ -12,6 +12,13 @@
 	"keywords": ["impec", "impec-js", "frontend library", "typescript"],
 	"author": "Damien Le Dantec <damien-le-dantec@hotmail.fr>",
 	"license": "ISC",
+	"bin": {
+		"create-impec-js": "bin/create-impec-js"
+	},
+	"files": [
+		"dist",
+		"bin"
+	],
 	"exports": {
 		".": {
 			"import": {

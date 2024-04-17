@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+
+console.log("Creating impec-js project...");
