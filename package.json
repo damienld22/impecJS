@@ -22,5 +22,8 @@
 		"husky": "^9.0.11",
 		"impecjs": "workspace:*",
 		"turbo": "^1.13.0"
+	},
+	"dependencies": {
+		"@changesets/cli": "^2.27.1"
 	}
 }
