@@ -1,4 +1,4 @@
-import { app, div, text } from "impec-js";
+import { app, div, text } from "impecjs";
 import { HelloWorld } from "./components/HelloWorld";
 
 app()

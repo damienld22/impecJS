@@ -31,7 +31,7 @@ The library provide some functions to create DOM element and always return the c
 See the _HelloWorld_ code :
 
 ```js
-import { app } from "impec-js";
+import { app } from "impecjs";
 
 app().addChild(text("Hello World")).render();
 ```
@@ -48,7 +48,7 @@ To create a state, you use `state` function.
 This function return a tuple of [value, setter] like ReactJS.
 
 ```js
-import { state } from "impec-js";
+import { state } from "impecjs";
 
 const [value, setValue] = state<number>(0);
 ```
@@ -56,7 +56,7 @@ const [value, setValue] = state<number>(0);
 To create value automatically updated when its dependencies are updated, you can use `computed` :
 
 ```js
-import { state, computed } from "impec-js";
+import { state, computed } from "impecjs";
 
 const [value, setValue] = state<number>(0);
 const isPositive = computed(() => value() > 0)
@@ -65,7 +65,7 @@ const isPositive = computed(() => value() > 0)
 If you want execute code when a state is updated, you can use `effect` :
 
 ```js
-import { state, effect } from "impec-js";
+import { state, effect } from "impecjs";
 
 const [value, setValue] = state<number>(0);
 effect(() => console.log(`value is updated : ${value()}`))
@@ -81,7 +81,7 @@ The properties `value` and `textContent` are specifics so dedicated functions ex
 See this example : 
 
 ```js
-import { app, element } from 'impec-js';
+import { app, element } from 'impecjs';
 
 app()
   // Add a basic button
@@ -125,7 +125,7 @@ To create your application you need to use `render()` function at the end of you
 Each attribute / textContent / value / etc... can use primitive value but also signal to be automatically updated.
 
 ```js
-import { component, div, text, button, state, computed } from "impec-js";
+import { component, div, text, button, state, computed } from "impecjs";
 
 const [counter, setCounter] = state<number>(0);
 const plainValue = 12;
@@ -146,7 +146,7 @@ Then you juste need to call the exported component like a function to use it.
 
 ```js
 // HelloWorld.ts
-import { component, text } from "impec-js";
+import { component, text } from "impecjs";
 
 export const HelloWorld = () => {
   return component().addChild(text("Hello World from component"));
@@ -155,7 +155,7 @@ export const HelloWorld = () => {
 
 ```js
 // index.ts
-import { app } from "impec-js";
+import { app } from "impecjs";
 import { HelloWorld } from "./HelloWorld";
 
 app().addChild(HelloWorld()).render();
@@ -168,7 +168,7 @@ You can put function to emit value to the parent component.
 
 ```js
 // HelloWorld.ts
-import { component, text } from "impec-js";
+import { component, text } from "impecjs";
 
 export const HelloWorld = ({ value: string }) => {
   return component().addChild(text(value));
@@ -177,7 +177,7 @@ export const HelloWorld = ({ value: string }) => {
 
 ```js
 // index.ts
-import { app } from "impec-js";
+import { app } from "impecjs";
 import { HelloWorld } from "./HelloWorld";
 
 app()
@@ -194,7 +194,7 @@ There is only 2 lifecycle hooks at this time :
 
 ```js
 // HelloWorld.ts
-import { component, text } from "impec-js";
+import { component, text } from "impecjs";
 
 const cpt = component();
 
@@ -217,7 +217,7 @@ export const HelloWorld = () => {
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, computed } from "impec-js";
+import { component, div, text, button, state, computed } from "impecjs";
 
 const cpt = component();
 
@@ -238,7 +238,7 @@ export const Counter = () => {
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, computed } from "impec-js";
+import { component, div, text, button, state, computed } from "impecjs";
 
 const cpt = component();
 
@@ -262,7 +262,7 @@ export const Counter = () => {
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, effect } from "impec-js";
+import { component, div, text, button, state, effect } from "impecjs";
 
 const cpt = component();
 
@@ -287,7 +287,7 @@ On each element, you can use `if()` method to put conditional rendering.
 
 ```js
 // Counter.ts
-import { component, div, text, button, state, computed } from "impec-js";
+import { component, div, text, button, state, computed } from "impecjs";
 
 const cpt = component();
 
@@ -323,7 +323,7 @@ import {
   loop,
   state,
   computed,
-} from "impec-js";
+} from "impecjs";
 
 const cpt = component();
 

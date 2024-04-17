@@ -1,4 +1,4 @@
-import { app } from "impec-js";
+import { app } from "impecjs";
 import { HelloWorld } from "./components/HelloWorld";
 import { Counter } from "./components/Counter";
 

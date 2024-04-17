@@ -24,7 +24,7 @@ jobs:
       run: pnpm install
 
     - name: Publish
-      working-directory: packages/impec-js-lib
+      working-directory: packages/impecjs-lib
       run: npm publish --no-git-checks
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

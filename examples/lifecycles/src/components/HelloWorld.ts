@@ -1,4 +1,4 @@
-import { component, text } from "impec-js";
+import { component, text } from "impecjs";
 
 const cpt = component();
 

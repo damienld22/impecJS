@@ -1,25 +1,25 @@
 {
-	"name": "impec-js",
+	"name": "impecjs",
 	"type": "module",
-	"main": "dist/impec-js.js",
+	"main": "dist/impecjs.js",
 	"description": "A small frontend library to render SPA using Builder design pattern with TypeScript",
 	"types": "dist/index.d.ts",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/damienld22/impecJS.git"
 	},
-	"keywords": ["impec", "impec-js", "frontend library", "typescript"],
+	"keywords": ["impec", "impecjs", "frontend library", "typescript"],
 	"author": "Damien Le Dantec <damien-le-dantec@hotmail.fr>",
 	"license": "ISC",
 	"exports": {
 		".": {
 			"import": {
-				"default": "./dist/impec-js.js",
+				"default": "./dist/impecjs.js",
 				"types": "./dist/index.d.ts"
 			},
 			"require": {
-				"default": "./dist/impec-js.cjs",
+				"default": "./dist/impecjs.cjs",
 				"types": "./dist/index.d.ts"
 			}
 		}
@@ -39,10 +39,15 @@
 		"@maverick-js/signals": "^5.11.4",
 		"@types/jsdom": "^21.1.6",
 		"@types/node": "^20.11.27",
+		"@types/prompts": "^2.4.9",
 		"jsdom": "^24.0.0",
 		"typescript": "^5.2.2",
 		"vite": "^5.0.0",
 		"vite-plugin-dts": "^3.7.3",
+		"vite-plugin-node-polyfills": "^0.21.0",
 		"vitest": "^1.4.0"
+	},
+	"dependencies": {
+		"prompts": "^2.4.2"
 	}
 }
