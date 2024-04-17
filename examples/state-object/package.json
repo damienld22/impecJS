@@ -1,5 +1,6 @@
 {
 	"name": "example-state-object",
+	"private": true,
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build"
