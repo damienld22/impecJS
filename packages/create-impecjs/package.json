@@ -4,18 +4,26 @@
 	"main": "dist/impecjs.js",
 	"description": "Library to create impecjs app",
 	"types": "dist/index.d.ts",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/damienld22/impecJS.git"
 	},
-	"keywords": ["impec", "impecjs", "frontend library", "typescript"],
+	"keywords": [
+		"impec",
+		"impecjs",
+		"frontend library",
+		"typescript"
+	],
 	"author": "Damien Le Dantec <damien-le-dantec@hotmail.fr>",
 	"license": "ISC",
 	"bin": {
 		"create-impecjs": "./dist/index.js"
 	},
-	"files": ["dist", "template-*"],
+	"files": [
+		"dist",
+		"template-*"
+	],
 	"exports": {
 		".": {
 			"import": {
