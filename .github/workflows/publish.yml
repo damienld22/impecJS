@@ -23,8 +23,14 @@ jobs:
     - name: Install dependencies
       run: pnpm install
 
-    - name: Publish
+    - name: Publish lib
       working-directory: packages/impecjs-lib
+      run: npm publish --no-git-checks
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+    
+    - name: Publish create-impecjs
+      working-directory: packages/create-impecjs
       run: npm publish --no-git-checks
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

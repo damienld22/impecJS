@@ -1,8 +1,8 @@
 {
-	"name": "impecjs",
+	"name": "create-impecjs",
 	"type": "module",
 	"main": "dist/impecjs.js",
-	"description": "A small frontend library to render SPA using Builder design pattern with TypeScript",
+	"description": "Library to create impecjs app",
 	"types": "dist/index.d.ts",
 	"version": "0.0.1",
 	"repository": {
@@ -12,37 +12,33 @@
 	"keywords": ["impec", "impecjs", "frontend library", "typescript"],
 	"author": "Damien Le Dantec <damien-le-dantec@hotmail.fr>",
 	"license": "ISC",
+	"bin": {
+		"create-impecjs": "./dist/index.js"
+	},
+	"files": ["dist", "template-*"],
 	"exports": {
 		".": {
 			"import": {
-				"default": "./dist/impecjs.js",
-				"types": "./dist/index.d.ts"
-			},
-			"require": {
-				"default": "./dist/impecjs.cjs",
+				"default": "./dist/index.js",
 				"types": "./dist/index.d.ts"
 			}
 		}
 	},
 	"scripts": {
-		"build": "tsc && vite build",
-		"watch": "vite build --watch",
-		"test": "vitest run",
-		"test:watch": "vitest",
+		"dev": "pnpm build && node dist/index.js",
+		"build": "tsc && tsup",
 		"lint": "pnpm biome lint .",
 		"lint:fix": "pnpm biome lint . --apply",
-		"prepublishOnly": "pnpm build && cp ../../README.md README.md",
 		"prepack": "pnpm build",
 		"pack": "pnpm pack"
 	},
 	"devDependencies": {
-		"@maverick-js/signals": "^5.11.4",
-		"@types/jsdom": "^21.1.6",
 		"@types/node": "^20.11.27",
-		"jsdom": "^24.0.0",
-		"typescript": "^5.2.2",
-		"vite": "^5.0.0",
-		"vite-plugin-dts": "^3.7.3",
-		"vitest": "^1.4.0"
+		"@types/prompts": "^2.4.9",
+		"tsup": "^8.0.2",
+		"typescript": "^5.2.2"
+	},
+	"dependencies": {
+		"prompts": "^2.4.2"
 	}
 }

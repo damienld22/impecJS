@@ -12,12 +12,12 @@ The second purpose of this library is to improve my knowledge of TypeScript and 
 
 ## To do
 
+- [ ] Unified versioning
 - [ ] More real examples
 - [ ] Benchmark
 - [ ] More TU (on real life cases)
 - [ ] Documentation for contributing
 - [ ] Dependencies tree of Renderer
-- [ ] Init script
 - [ ] See later ...
 
 ## Documentation
@@ -39,6 +39,32 @@ app().addChild(text("Hello World")).render();
 `app()` Create the root of your application.
 
 Then you use `addChild()` to add element. For example here, we add a text (`span`).
+
+### Create new application
+
+
+> **Compatibility Note:**
+> ImpecJS requires [Node.js](https://nodejs.org/en/) version 18+, 20+. However, some templates require a higher Node.js version to work, please upgrade if your package manager warns about it.
+
+With NPM:
+
+```bash
+$ npm create impecjs@latest
+```
+
+With Yarn:
+
+```bash
+$ yarn create impecjs
+```
+
+With PNPM:
+
+```bash
+$ pnpm create impecjs
+```
+
+Then follow the prompts!
 
 #### State in _Impec JS_
 
