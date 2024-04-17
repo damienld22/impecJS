@@ -1,5 +1,11 @@
 # impecjs
 
+## 0.0.4
+
+### Patch Changes
+
+- Fix template creator
+
 ## 0.0.3
 
 ### Patch Changes

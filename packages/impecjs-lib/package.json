@@ -4,7 +4,7 @@
 	"main": "dist/impecjs.js",
 	"description": "A small frontend library to render SPA using Builder design pattern with TypeScript",
 	"types": "dist/index.d.ts",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/damienld22/impecJS.git"

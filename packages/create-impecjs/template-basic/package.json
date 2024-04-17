@@ -6,7 +6,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"impecjs": "^0.0.3"
+		"impecjs": "^0.0.4"
 	},
 	"devDependencies": {
 		"vite": "^5.0.0"
